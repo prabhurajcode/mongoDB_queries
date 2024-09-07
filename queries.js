@@ -4,7 +4,8 @@ db.products.find();
 
 // 2. Find the product price which are between 400 to 800
 
-db.products.find({ product_price: { $lte: 800, $gte: 400 } });
+db.products.find({ product_price: { $lte: 800, $gte: 400 } }); 
+                       //or
 db.products.find({$and: [{ product_price: { $lte: 800 } }, { product_price: { $gte: 400 } }] });
 
 // 3. Find the product price which are not between 400 to 600
